@@ -8,15 +8,14 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 -- here you can setup the language servers
-lsp_zero.setup_servers({'tsserver', 'eslint', 'pylsp'})
+-- lsp_zero.setup_servers({'tsserver', 'eslint', 'pylsp'})
 
 local lspconfig = require('lspconfig')
 lspconfig.intelephense.setup({})
-lspconfig.texlab.setup({})
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {},
+    ensure_installed = {'tsserver', 'eslint', 'texlab', 'pylsp'},
     handlers = {
         function(server_name)
             require('lspconfig')[server_name].setup({})
