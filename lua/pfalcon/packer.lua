@@ -8,7 +8,6 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.6',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
@@ -32,6 +31,14 @@ return require('packer').startup(function(use)
 	  {'hrsh7th/nvim-cmp'},
 	  {'L3MON4D3/LuaSnip'},
   }
+  
   use ('prichrd/netrw.nvim')
   use ('nvim-tree/nvim-web-devicons')
+  use {
+      "windwp/nvim-autopairs",
+      event = "InsertEnter",
+      config = function()
+          require("nvim-autopairs").setup {}
+      end
+  }
 end)

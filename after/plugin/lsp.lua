@@ -7,13 +7,14 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
--- here you can setup the language servers
+-- here you can setup the language servers manually
 -- lsp_zero.setup_servers({'tsserver', 'eslint', 'pylsp'})
 
 local lspconfig = require('lspconfig')
 lspconfig.intelephense.setup({})
 
-require('mason').setup({})
+-- here you can setup the language servers automatically 
+ require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {'tsserver', 'eslint', 'texlab', 'pylsp'},
     handlers = {
