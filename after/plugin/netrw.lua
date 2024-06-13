@@ -1,6 +1,4 @@
 require'netrw'.setup{
-    -- Put your configuration here, or leave the object empty to take the default
-    -- configuration.
-   use_devicons = true, -- Uses nvim-web-devicons if true, otherwise use the file icon specified above
+    use_devicons = true, -- Uses nvim-web-devicons if true
     mappings = {}, -- Custom key mappings
 }
