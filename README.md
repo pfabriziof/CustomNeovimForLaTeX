@@ -6,6 +6,7 @@ For installing and using this custom version of neovim you need to install the f
 3. libstdc++ or libstdc++6 depending of your distro
 4. g++
 5. virtualenv for python
+6. [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
 6. Any [NerdFont](https://www.nerdfonts.com/)
 7. Install the latest version of [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md)
 8. Install the latest version of [LaTeX](https://www.latex-project.org/get/)
